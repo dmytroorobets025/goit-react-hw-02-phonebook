@@ -49,24 +49,18 @@ export default class App extends Component {
     return (
       <div
         style={{
-          // height: '100vh',
-          // display: 'flex',
-          // justifyContent: 'center',
-          // alignItems: 'center',
           marginLeft: 'auto',
           marginRight: 'auto',
           width: '700px',
-          // fontSize: 40,
-          // color: '#010101',
         }}
       >
         <h1 style={{ color: '#069b94' }}>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
         <Filter onChange={this.filterContacts} />
         <h2 style={{ color: '#069b94' }}>Contacts</h2>
-        {/* <div style={{ color: 'blue', marginTop: '10px' }}>
+        <div style={{ color: 'blue', marginTop: '10px' }}>
           All contacts: {contacts.length}
-        </div> */}
+        </div>
         <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
       </div>
     );
